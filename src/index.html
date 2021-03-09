@@ -33,21 +33,16 @@
         <!--primera fila de elementos-->
         <div class="col-md-4">
           <label for="cardnumber1" class="form-label"><b>Card #</b></label>
-          <input type="number" class="form-control" id="cardnumber" />
+          <input type="text" class="form-control" id="cardnumber" />
         </div>
         <div class="col-md-4">
           <label for="cvc" class="form-label"><b>CVC #</b></label>
-          <input
-            type="number"
-            class="form-control"
-            id="cvc"
-            placeholder="0000"
-          />
+          <input type="text" class="form-control" id="cvc" placeholder="0000" />
         </div>
         <div class="col-md-4">
           <label for="amount" class="form-label"><b>Amount $</b></label>
           <input
-            type="number"
+            type="text"
             class="form-control"
             id="amount"
             placeholder="Amount"
@@ -77,39 +72,55 @@
         </div>
         <div class="col-md-3">
           <label for="postal" class="form-label"><b>Postal Code</b></label>
-          <input type="number" class="form-control" id="postal" />
+          <input type="text" class="form-control" id="postal" />
         </div>
 
         <!--cuarta fila de elementos  elementos-->
         <div class="col-6 ">
-          <b class="float-start">We Accept:</b>
-          <br />
-          <div class="form-check float-start bg-light">
-            <label class="form-check-label" for="gridCheck">
-              <!--imagen-->
-              <i class="fab fa-cc-mastercard me-3"></i>
-            </label>
-            <input class="form-check-input" type="checkbox" id="gridCheck" />
-          </div>
-          <div class="form-check float-start bg-light">
-            <input class="form-check-input" type="checkbox" id="gridCheck2" />
-            <label class="form-check-label" for="gridCheck">
-              <!--imagen-->
-              <i class="fab fa-cc-visa me-3"></i>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              <i class="fab fa-cc-mastercard"></i>
             </label>
           </div>
-          <div class="form-check float-start bg-light">
-            <input class="form-check-input" type="checkbox" id="gridCheck3" />
-            <label class="form-check-label" for="gridCheck">
-              <!--imagen-->
-              <i class="fab fa-cc-diners-club me-3"></i>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              <i class="fab fa-cc-visa"></i>
             </label>
           </div>
-          <div class="form-check float-start bg-light">
-            <input class="form-check-input" type="checkbox" id="gridCheck4" />
-            <label class="form-check-label" for="gridCheck">
-              <!--imagen-->
-              <i class="fab fa-cc-amex me-3"></i>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault3"
+            />
+            <label class="form-check-label" for="flexRadioDefault3">
+              <i class="fab fa-cc-diners-club"></i>
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault4"
+            />
+            <label class="form-check-label" for="flexRadioDefault4">
+              <i class="fab fa-cc-amex"></i>
             </label>
           </div>
         </div>

@@ -14,14 +14,14 @@ myForm.addEventListener("submit", e => {
   let postal = document.getElementById("postal");
   let mensaje = document.getElementById("exampleFormControlTextarea1");
   let state = document.getElementById("state");
-  let checkbox = document.getElementById("gridCheck");
-  let checkbox2 = document.getElementById("gridCheck2");
-  let checkbox3 = document.getElementById("gridCheck3");
-  let checkbox4 = document.getElementById("gridCheck4");
+  let radio1 = document.getElementById("flexRadioDefault1");
+  let radio2 = document.getElementById("flexRadioDefault2");
+  let radio3 = document.getElementById("flexRadioDefault3");
+  let radio4 = document.getElementById("flexRadioDefault4");
 
   divalerta.style.textAlign = "center";
   //validacion card number
-  if (!isNaN(cardnumber.value)) {
+  if (cardnumber.value == "") {
     cardnumber.style.backgroundColor = "#FF9595";
 
     divalerta.style.backgroundColor = "#FF9595";
@@ -29,7 +29,7 @@ myForm.addEventListener("submit", e => {
   }
 
   //validacion cvc
-  if (!isNaN(cvc.value)) {
+  if (cvc.value == "") {
     cvc.style.backgroundColor = "#FF9595";
 
     divalerta.style.backgroundColor = "#FF9595";
@@ -37,7 +37,7 @@ myForm.addEventListener("submit", e => {
   }
 
   //validacion amount
-  if (!isNaN(amount.value)) {
+  if (amount.value == "") {
     amount.style.backgroundColor = "#FF9595";
 
     divalerta.style.backgroundColor = "#FF9595";
@@ -81,7 +81,7 @@ myForm.addEventListener("submit", e => {
   }
 
   //validacion postal
-  if (!isNaN(postal.value)) {
+  if (postal.value == "") {
     postal.style.backgroundColor = "#FF9595";
 
     divalerta.style.backgroundColor = "#FF9595";
@@ -109,28 +109,17 @@ myForm.addEventListener("submit", e => {
     divalerta.innerHTML = "<p>some fields are missing</p>";
   }
 
-  //validacion checkbox
-  if (!checkbox.checked) {
-    checkbox.style.backgroundColor = "#FF9595";
-
-    divalerta.style.backgroundColor = "#FF9595";
-    divalerta.innerHTML = "<p>some fields are missing</p>";
-  }
-  if (!checkbox2.checked) {
-    checkbox2.style.backgroundColor = "#FF9595";
-
-    divalerta.style.backgroundColor = "#FF9595";
-    divalerta.innerHTML = "<p>some fields are missing</p>";
-  }
-  if (!checkbox3.checked) {
-    checkbox3.style.backgroundColor = "#FF9595";
-
-    divalerta.style.backgroundColor = "#FF9595";
-    divalerta.innerHTML = "<p>some fields are missing</p>";
-  }
-  if (!checkbox4.checked) {
-    checkbox4.style.backgroundColor = "#FF9595";
-
+  //validacion radio box
+  if (
+    !radio1.checked &&
+    !radio2.checked &&
+    !radio3.checked &&
+    !radio4.checked
+  ) {
+    radio1.style.backgroundColor = "#FF9595";
+    radio2.style.backgroundColor = "#FF9595";
+    radio3.style.backgroundColor = "#FF9595";
+    radio4.style.backgroundColor = "#FF9595";
     divalerta.style.backgroundColor = "#FF9595";
     divalerta.innerHTML = "<p>some fields are missing</p>";
   }
